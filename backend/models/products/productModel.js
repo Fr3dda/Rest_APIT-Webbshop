@@ -1,7 +1,5 @@
+const { exists } = require('./productSchema');
 const Product = require('./productSchema');
-
-
-
 
 
 
@@ -31,7 +29,7 @@ exports.createProduct = (req, res) => {
             short:  req.body.short,
             desc:   req.body.desc,
             price:  req.body.price,
-            image:  req.body.image,
+            image:  req.body.image
         })
         .then((data) => {
             res.status(201).json({
@@ -49,13 +47,6 @@ exports.createProduct = (req, res) => {
                 err
             })
         })
-        
-
-
-
-
-
-
     })
      
 }
