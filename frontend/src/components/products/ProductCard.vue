@@ -1,7 +1,13 @@
 <template>
       <div class="col">
-        <div class="card">
-        <img src="https://mdbcdn.b-cdn.net/img/new/standard/city/041.webp" class="card-img-top" alt="Hollywood Sign on The Hill"/>
+        <div class="card h-100">
+ <div>
+        <img :src="product.image" class="card-img-top" />
+        <router-link to="/">
+        <div class="mask"></div>
+        </router-link>
+ </div>
+
         <div class="card-body">
             <h5 class="card-title">Card title</h5>
             <p class="card-text">
@@ -15,7 +21,7 @@
 
 <script>
 export default {
-
+    props: ['product']
 }
 </script>
 
