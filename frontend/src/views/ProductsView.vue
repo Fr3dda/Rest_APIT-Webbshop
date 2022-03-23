@@ -5,9 +5,16 @@
 </template>
 
 <script>
-import ProductCardDeck from '../components/products/productCardDeck.vue'
+import { mapActions } from 'vuex' 
+import ProductCardDeck from '../components/products/ProductCardDeck.vue'
 export default {
-    components: { ProductCardDeck }
+    components: { ProductCardDeck },
+    methods: {
+      ...mapActions(['getProducts'])
+    },
+    created() {
+      this.getProducts()
+    }
 }
 </script>
 
