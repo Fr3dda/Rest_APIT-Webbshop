@@ -5,10 +5,10 @@
 >
   <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
     <div class="d-flex justify-content-center align-items-center h-100">
-      <div class="text-white">
-        <h1 class="mb-3">Phones that doesn't make mistakes...</h1>
+      <div class="text-white ">
+        <h1 class="mb-3 ">Phones that doesn't make mistakes...</h1>
         <h4 class="mb-3">We got the best deals just for you !</h4>
-        <a class="btn btn-outline-light btn-lg" href="#!" role="button">Check 'em out!</a>
+        <a class="btn btn-outline-light btn-lg " href="#!" role="button">Check 'em out!</a>
       </div>
     </div>
   </div>
