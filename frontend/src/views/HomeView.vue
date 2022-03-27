@@ -1,28 +1,31 @@
 <template>
   <div class="home">
 
- <div
-  class=" hero p-5 text-center bg-image"
->    
-  
+ <div class=" hero p-5 text-center bg-image">
+   <div class="mask">
     <div class="d-flex justify-content-center align-items-center h-100">
       <div class="text-white ">
-        <h1 class="mb-3 ">Phones that doesn't make mistakes...</h1>
+        <h1 class="mb-3 ">Phones that doesn't disappoint</h1>
         <h4 class="mb-3">We got the best deals just for you !</h4>
-        <div class=" ">
-        <router-link class="btn btn-outline-light btn-lg" to="/products">Check 'em out!</router-link>
-
+        <!-- <div> -->
+        <!-- <router-link class="btn btn-outline-light btn-lg example hoverable z-depth-0" to="/products">Check em out...</router-link> -->
+        <router-link to="/products">
+          <button class="btn btn-info btn-lg stroke">Check em out</button>
+        </router-link>
+        
+        <!-- </div>  -->
         </div>
       </div>
     </div>
-
-</div>
+    
 
   </div>
+
+</div>
 </template>
 
 <script>
-// @ is an alias to /src
+
 
 
 export default {
@@ -54,8 +57,29 @@ export default {
 }
 
 .mask{
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: rgba(0, 0, 0, 0.521);
+  
 }
-
+.stroke ul button li a {
+  position: relative;
+}
+.stroke ul button li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(0, 0, 0);
+  height: 1px;
+}
+.stroke ul button li a:hover:after {
+  width: 100%;
+}
+nav ul button li a, nav ul li a:after, nav ul li a:before {
+    transition: all .5s;
+}
 
 </style>

@@ -53,23 +53,16 @@
           data-mdb-toggle="dropdown"
           aria-expanded="false"
         >
-          <i class="fas fa-bell"></i>
-          
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span v-if="cartItemCount" class="badge rounded-pill badge-notification bg-danger">{{cartItemCount}}</span>
         </a>
-        <ul
-          class="dropdown-menu dropdown-menu-end"
+        <div
+          class="dropdown-menu dropdown-menu-end shopping-cart"
           aria-labelledby="navbarDropdownMenuLink"
         >
-          <li>
-            <a class="dropdown-item" href="#">Some news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Another news</a>
-          </li>
-          <li>
-            <a class="dropdown-item" href="#">Something else here</a>
-          </li>
-        </ul>
+        <ShoppingCart />
+    
+        </div>
       </div>
       <!-- Avatar -->
       <div class="dropdown">
@@ -108,14 +101,25 @@
 </template>
 
 <script>
+
+  import { mapGetters } from 'vuex'
+  import ShoppingCart from './CART/ShoppingCart.vue'
 export default {
-    name: 'PrimaryNav'
+  components: { ShoppingCart },
+    name: 'PrimaryNav',
+    computed: {
+      ...mapGetters(['cartItemCount'])
+  },
 
 }
 </script>
 
-<style>
+<style scoped>
 
+
+  .shopping-cart {
+    min-width: 450px;
+  }
 /* stroke */
 
 .stroke ul li a {

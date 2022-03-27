@@ -1,6 +1,6 @@
 <template>
   <div v-if="product">
-      <div class="row d-flex justify-content-center p-2 mt-4 ">
+      <div class="row d-flex justify-content-center p-2 mt-4  ">
           <div class=" col-lg-5 col-sm-9 ">
               <img :src="product.image" class="img-fluid ">
           </div>
@@ -10,6 +10,9 @@
               <div class="mt-3 p-2">
                   <p>{{product.desc}}</p>
               </div>
+          <div class="text-end mt-5">
+        <button @click="addCart({ product, quantity })" class="btn btn-info"><i class="fa-solid fa-cart-plus"></i> Add to cart</button>
+      </div>
           </div>
       </div>
 
@@ -26,7 +29,7 @@ data(){
     }
 },
 methods: {
-    ...mapActions(['getProductById'])
+    ...mapActions(['getProductById', 'addCart'])
      
 },
 computed: {
