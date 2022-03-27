@@ -1,6 +1,6 @@
 <template>
   <!-- Navbar -->
-<nav class="navbar navbar-expand-lg navbar-light bg-progress-bar progress-bar-striped bg-info ">
+<nav class="navbar p-3 navbar-expand-lg navbar-light bg-progress-bar progress-bar-striped bg-info ">
     
   <!-- Container wrapper -->
   <div class="container">
@@ -18,14 +18,14 @@
     </button>
 
     <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse stroke" id="navbarSupportedContent">
       <!-- Navbar brand -->
       <router-link class="navbar-brand mt-2 mt-lg-0 " to="/">
           <i class="fa-brands fa-shopify me-1 display-6"></i> Phoneshopping.se
       </router-link>
       <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-        <li class="nav-item">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+        <li class="nav-item ">
           <router-link class="nav-link" to="/">Home</router-link>
         </li>
         <li class="nav-item">
@@ -54,7 +54,7 @@
           aria-expanded="false"
         >
           <i class="fas fa-bell"></i>
-          <span class="badge rounded-pill badge-notification bg-danger">1</span>
+          
         </a>
         <ul
           class="dropdown-menu dropdown-menu-end"
@@ -89,13 +89,13 @@
           aria-labelledby="navbarDropdownMenuAvatar"
         >
           <li>
-            <a class="dropdown-item" href="#">My profile</a>
+            <router-link class="dropdown-item" to="/login">My profile</router-link>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Settings</a>
+            <router-link class="dropdown-item" to="/Settings">Settings</router-link>
           </li>
           <li>
-            <a class="dropdown-item" href="#">Logout</a>
+            <router-link class="dropdown-item" to="/">Logout</router-link>
           </li>
         </ul>
       </div>
@@ -115,5 +115,29 @@ export default {
 </script>
 
 <style>
+
+/* stroke */
+
+.stroke ul li a {
+  position: relative;
+}
+.stroke ul li a:after {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 0%;
+  content: '.';
+  color: transparent;
+  background: rgb(0, 0, 0);
+  height: 1px;
+}
+.stroke ul li a:hover:after {
+  width: 100%;
+}
+nav ul li a, nav ul li a:after, nav ul li a:before {
+    transition: all .5s;
+}
 
 </style>

@@ -1,17 +1,21 @@
 <template>
   <div class="home">
+
  <div
-  class=" hero p-5 text-center bg-image rounded-3"
->
-  <div class="mask" style="background-color: rgba(0, 0, 0, 0.6);">
+  class=" hero p-5 text-center bg-image"
+>    
+  
     <div class="d-flex justify-content-center align-items-center h-100">
       <div class="text-white ">
         <h1 class="mb-3 ">Phones that doesn't make mistakes...</h1>
         <h4 class="mb-3">We got the best deals just for you !</h4>
-        <a class="btn btn-outline-light btn-lg " href="#!" role="button">Check 'em out!</a>
+        <div class=" ">
+        <router-link class="btn btn-outline-light btn-lg" to="/products">Check 'em out!</router-link>
+
+        </div>
       </div>
     </div>
-  </div>
+
 </div>
 
   </div>
@@ -22,6 +26,16 @@
 
 
 export default {
+   data() {
+    return {
+      x: 0
+    }
+  },
+  methods: {
+    onMousemove(e) {
+      this.x = e.clientX
+    }
+  },
   name: 'HomeView',
   components: {
 
@@ -38,4 +52,10 @@ export default {
   background-repeat:no-repeat !important; /* Do not repeat the image */
   background-size: cover !important; /* Resize the background image to cover the entire container */
 }
+
+.mask{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+
 </style>
