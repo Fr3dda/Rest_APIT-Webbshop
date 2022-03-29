@@ -43,7 +43,8 @@
 
 
 .header-img{
-      background-image: url('C:\Users\Fladd\Desktop\I vägen\Rest_api\Rest_APIT-Webbshop\frontend\src\assets\img\neonbrand-EjrsfPe_iBo-unsplash.jpg');
+      background-image: url('../assets/img/neonbrand-EjrsfPe_iBo-unsplash.jpg');
+      /* background-image: url('./img/neonbrand-EjrsfPe_iBo-unsplash.jpg'); */
       height: 93vh;
       min-width: 100vw;
 }

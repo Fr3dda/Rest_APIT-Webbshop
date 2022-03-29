@@ -1,7 +1,7 @@
 <template>
-  <div class="home">
+  <div class="home ">
 
- <div class=" hero p-5 text-center bg-image">
+ <div class=" hero p-5 text-center bg-image ">
    <div class="mask">
     <div class="d-flex justify-content-center align-items-center h-100">
       <div class="text-white ">
@@ -48,7 +48,8 @@ export default {
 
 <style scoped>
 .hero {
-  background-image: url('C:\Users\Fladd\Desktop\I vägen\Rest_api\Rest_APIT-Webbshop\frontend\src\assets\img\joe-roberts-1OD3hpab6RU-unsplash.jpg');
+  background-image: url('../assets/img/joe-roberts-1OD3hpab6RU-unsplash.jpg');
+  /* background-image: url('img/joe-roberts-1OD3hpab6RU-unsplash.jpg'); */
   height: 100vh !important;  /* You must set a specified height */
   min-width: 100vh !important; /* You must set a specified height */
   background-position :center !important; /* Center the image */

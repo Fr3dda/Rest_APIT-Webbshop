@@ -6,7 +6,7 @@
 
 <script>
 import { mapActions } from 'vuex' 
-import ProductCardDeck from '../components/products/ProductCardDeck.vue'
+import ProductCardDeck from '../components/products/productCardDeck.vue'
 export default {
     components: { ProductCardDeck },
     methods: {
