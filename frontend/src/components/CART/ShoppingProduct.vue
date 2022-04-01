@@ -19,7 +19,7 @@
 
       </div>
       <!-- <button class="btn btn-danger btn-sm me-2" @click="$emit=('removeProduct')"><i class="fa-solid fa-trash"></i></button> -->
-      <button @click="REMOVE_PRODUCT" class="btn btn-danger btn-sm me-2" ><i class="fa-solid fa-trash"></i></button>
+      <button @click="REMOVE_PRODUCT" class="btn btn-danger  btn-sm"><i class="fa-solid fa-trash"></i></button>
     <div>
 
     </div>

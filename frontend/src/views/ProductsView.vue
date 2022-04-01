@@ -1,6 +1,6 @@
 <template>
   <div>
-      <ProductCardDeck class="wow fadeInUp" data-wow-delay="0.3s" />
+      <ProductCardDeck class="wow fadeInUp" data-wow-delay="0.3s " />
   </div>
 </template>
 

@@ -9,6 +9,7 @@
   <div class="p-2 d-flex justify-content-center align-items-center " >
     The cart is empty...
   </div>
+  <div class="dropdown-divider"></div>
 </div>
 
 <div class="p-2 d-flex justify-content-between align-items-center" >
@@ -16,7 +17,7 @@
     <div>Totalt:  {{ shoppingCartTotal }} SEK </div>
     <small class="text-muted">ink. moms</small>
   </div>
-  <button class="btn btn-info"> Gå till kassan</button>
+  <button type="button" class="btn btn-sm btn-warning btn-rounded" data-mdb-ripple-color="#ffffff" > Gå till kassan</button>
 </div>
 </template>
 

@@ -12,23 +12,16 @@ const routes = [
     name: 'home',
     component: HomeView
   },
-
   {
     path: '/login',
     name: 'login',
     component: loginPage
   },
-
-
   {
     path: '/products',
     name: 'products',
     component: ProductsView
   },
-
-
-
-
   {
   path: '/products/details/:id',
     name: 'productDetails',

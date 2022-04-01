@@ -15,6 +15,7 @@
       aria-label="Toggle navigation"
     >
       <i class="fas fa-bars"></i>
+      
     </button>
   
     <!-- Collapsible wrapper -->
@@ -59,15 +60,14 @@
           <span v-if="cartItemCount" class="badge rounded-pill badge-notification bg-danger">{{cartItemCount}}</span>
         </a>
         <div @click="$event.stopPropagation()"
-          class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end shopping-cart"
+          class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end   shopping-cart"
           aria-labelledby="navbarDropdownMenuLink"
         >
         <ShoppingCart />
-    
         </div>
       </div>
       <!-- Avatar -->
-      <div class="dropdown">
+      <div class="dropdownv" v-if="user">
         <a
           class="text-reset dropdown-toggle"
           href="#"
@@ -80,25 +80,24 @@
           <i class=" fa-solid fa-user"></i>
         </a>
         <ul 
-          class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"
+          class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end dropdown-menu-sm-end"
           aria-labelledby="navbarDropdownMenuAvatar"
         >
           <li>
             <router-link class="dropdown-item" to="/login">My profile</router-link>
           </li>
           <li>
-            <router-link class="dropdown-item" to="/Settings">Settings</router-link>
-          </li>
-          <li>
             <router-link class="dropdown-item" to="/">Logout</router-link>
           </li>
         </ul>
       </div>
-    </div>
+        <router-link to="/login" class="nav-link btn btn-sm btn-danger btn-rounded" v-else>Login</router-link>
+      </div>
+    
     <!-- Right elements -->
-  </div>
+    </div>
   <!-- Container wrapper -->
-</nav>
+  </nav>
 <!-- Navbar -->
 </template>
 
@@ -114,7 +113,11 @@ export default {
       ...mapGetters(['cartItemCount'])
   },
 
-}
+  }
+
+  
+
+
 </script>
 
 <style scoped>
