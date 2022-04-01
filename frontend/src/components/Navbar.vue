@@ -1,12 +1,12 @@
 <template>
   <!-- Navbar -->
-<nav class="navbar p-3 navbar-expand-lg navbar-light bg-progress-bar progress-bar-striped bg-info ">
+<nav class="navbar  navbar-expand-lg navbar-light  scrolling-navbar  bg-orange ">
     
   <!-- Container wrapper -->
   <div class="container">
     <!-- Toggle button -->
     <button
-      class="navbar-toggler"
+      class="navbar-toggler "
       type="button"
       data-mdb-toggle="collapse"
       data-mdb-target="#navbarSupportedContent"
@@ -16,15 +16,16 @@
     >
       <i class="fas fa-bars"></i>
     </button>
-
+  
     <!-- Collapsible wrapper -->
-    <div class="collapse navbar-collapse stroke" id="navbarSupportedContent">
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <!-- Navbar brand -->
       <router-link class="navbar-brand mt-2 mt-lg-0 " to="/">
           <i class="fa-brands fa-shopify me-1 display-6"></i> Phoneshopping.se
       </router-link>
+      
       <!-- Left links -->
-      <ul class="navbar-nav me-auto mb-2 mb-lg-0  ">
+      <ul class="navbar-nav mr-auto smooth-scroll">
         <li class="nav-item ">
           <router-link class="nav-link" to="/">Home</router-link>
         </li>
@@ -44,20 +45,21 @@
       <!-- Icon -->
 
       <!-- Notifications -->
-      <div class="dropdown">
-        <a
+      <div class="dropdown" >
+        <a 
           class="text-reset me-3 dropdown-toggle hidden-arrow"
           href="#"
           id="navbarDropdownMenuLink"
           role="button"
           data-mdb-toggle="dropdown"
           aria-expanded="false"
+         
         >
-          <i class="fa-solid fa-cart-shopping"></i>
+          <i class="fa-solid fa-cart-shopping" ></i>
           <span v-if="cartItemCount" class="badge rounded-pill badge-notification bg-danger">{{cartItemCount}}</span>
         </a>
-        <div
-          class="dropdown-menu dropdown-menu-end shopping-cart"
+        <div @click="$event.stopPropagation()"
+          class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end shopping-cart"
           aria-labelledby="navbarDropdownMenuLink"
         >
         <ShoppingCart />
@@ -78,7 +80,7 @@
           <i class=" fa-solid fa-user"></i>
         </a>
         <ul 
-          class="dropdown-menu dropdown-menu-end"
+          class="dropdown-menu dropdown-menu-right dropdown-menu-lg-end"
           aria-labelledby="navbarDropdownMenuAvatar"
         >
           <li>
@@ -104,6 +106,7 @@
 
   import { mapGetters } from 'vuex'
   import ShoppingCart from './CART/ShoppingCart.vue'
+  
 export default {
   components: { ShoppingCart },
     name: 'PrimaryNav',
@@ -116,30 +119,23 @@ export default {
 
 <style scoped>
 
+nav {
+  background: linear-gradient(to bottom, #f36404ea 0%, #f364047e 90%);
+  box-shadow: 0px 2px 10px 2px;
+  border-bottom: .5px solid rgba(0, 0, 0, 0.281);
+  min-height: 100px;
+}
 
   .shopping-cart {
-    min-width: 450px;
+    min-width: 500px;
   }
-/* stroke */
 
-.stroke ul li a {
-  position: relative;
+nav{
+  z-index: 1 !important;
 }
-.stroke ul li a:after {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  margin: auto;
-  width: 0%;
-  content: '.';
-  color: transparent;
-  background: rgb(0, 0, 0);
-  height: 1px;
-}
-.stroke ul li a:hover:after {
-  width: 100%;
-}
+
+
+
 nav ul li a, nav ul li a:after, nav ul li a:before {
     transition: all .5s;
 }

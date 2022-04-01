@@ -1,6 +1,7 @@
 <template>
-  <div class="row  d-flex justify-content-center  row-cols-2 row-cols-md-2 row-cols-lg-4 g-4 m-4 ">
+  <div class="row p-5 d-flex justify-content-center cols-2 row-cols-md-12 row-cols-lg-4 mt-4  ">
     <ProductCard v-for="product in products" :key="product._id" :product="product"/>
+    
  
 </div>
 </template>

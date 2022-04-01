@@ -1,6 +1,7 @@
 export default {
     state: {
-        cart: []
+        cart: [],
+        
     },
     getters: {
         shoppingCart: state =>
@@ -23,6 +24,7 @@ export default {
          }
     },
     mutations: {
+        
         ADD_CART: (state, {product, quantity}) => {
             let exist = state.cart.find(item => item.product._id === product._id)
             if(exist) {
@@ -30,11 +32,22 @@ export default {
             return
         }
         state.cart.push({ product, quantity })
+        },
+        REMOVE_PRODUCT: (state, product) => {
+            state.cart = state.cart.filter(item => {
+                return item.product.id !== product.id;
+            })
         }
     },
     actions:{
+        
         addCart: ({commit}, {product,quantity}) => {
             commit('ADD_CART', {product,quantity})
+        },
+
+        removeProduct:  ({commit}, product) => {
+            commit('REMOVE_PRODUCT', product);
         }
-    }
+    },
+    
 }

@@ -1,6 +1,6 @@
 <template>
 <Navbar />
-<div class="container-fluid p-0">
+<div class="container-fluid">
   <router-view/>
 </div>
 </template>
@@ -15,5 +15,10 @@ export default {
 
 
 <style>
+
+.container-fluid{
+  padding-left: 0;
+  padding-right: 0;
+}
 
 </style>

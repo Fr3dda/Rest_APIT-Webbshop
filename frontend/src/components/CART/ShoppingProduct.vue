@@ -9,25 +9,19 @@
         <div><small>{{ item.quantity }} x {{ item.product.price }}</small></div>
       </div>
     </div>
-      <div class="col-md-3 col-sm-3  col-3 col-lg-3  d-flex">
-        <button class="btn btn-link px-2"
-          @click.stop="reducting">
-          <i class="fas fa-minus"></i>
-        </button>
+      <div class="col-md-3 col-sm-3  col-3 col-lg-3  d-flex" >
+        
+        <button class="btn btn-link px-2" @click.stop="decrement"><i class="fas fa-minus"></i></button>
+        <input id="form1" min="0" max="99" name="quantity" value="1" type="number" class="form-control form-control-sm" />
+        <button class="btn btn-link px-2" @click.stop="increment"> <i class="fas fa-plus"></i></button>
+ 
 
-        <input id="form1" min="0" name="quantity" value="1" type="number"
-            class="form-control form-control-sm" />
 
-        <button class="btn btn-link px-2"
-         @click.stop="elevating">
-          <i class="fas fa-plus"></i>
-        </button>
       </div>
+      <!-- <button class="btn btn-danger btn-sm me-2" @click="$emit=('removeProduct')"><i class="fa-solid fa-trash"></i></button> -->
+      <button @click="REMOVE_PRODUCT" class="btn btn-danger btn-sm me-2" ><i class="fa-solid fa-trash"></i></button>
     <div>
-      <div class="btn-group btn-group-sm me-2">
 
-      </div>
-      <button class=" btn btn-danger btn-sm me-2"><i class="fa-solid fa-trash"></i></button>
     </div>
   </div>
 </template>
@@ -36,13 +30,17 @@
 export default {
   props: ['item'],
   methods: {
-    reducting() {
-      // e.stopPropagation()
+    decrement() {
+      
       console.log('minus')
     },
-    elevating() {
+    increment() {
       console.log('plus')
+    },
+    removeProduct(product) {
+      this.$store.dispatch('removeProduct', product.id)
     }
+
   }
 }
 </script>

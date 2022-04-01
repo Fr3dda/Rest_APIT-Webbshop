@@ -4,6 +4,8 @@ import ProductsView from '../views/ProductsView.vue'
 import ProductDetails from '../views/ProductDetails.vue'
 import loginPage from '../views/loginPage.vue'
 
+
+
 const routes = [
   {
     path: '/',
