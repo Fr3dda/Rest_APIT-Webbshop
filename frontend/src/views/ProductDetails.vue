@@ -4,8 +4,8 @@
           <div class=" mt-5 col-lg-5 col-sm-9 justify-content-center">
               <img :src="product.image" class="img-fluid d-flex  ">
           </div>
-          <div class="col-lg-8 col-md-0 ">
-              <h2 class="text-info h2-responsive justify-content-center text-center p-3 mt-5 ">{{product.name}}</h2>
+          <div class="col-lg-8 col-md-0 p-3">
+              <h2 class="text-dark  h2-responsive justify-content-center text-center p-3 mt-5 ">{{product.name}}</h2>
               <p class="h4 text-danger text-center">{{product.price}} SEK</p>
               <div class="mt-3 p-2">
                   <p>{{product.desc}}</p>
